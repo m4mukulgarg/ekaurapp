@@ -1,0 +1,138 @@
+--drop table patients;
+--create table patients(
+--	email varchar(100) PRIMARY KEY,
+--	name varchar(32) NOT NULL,
+--	address varchar(1000) NOT NULL,
+--	blood_group varchar(6) NOT NULL,
+--	height int(10) not null,
+--	weight int(10) not null,
+--	bp_sys int(10)  not null,
+--	bp_dia int(10) not null,
+--	current_medications varchar(1000),
+--	past_diseases varchar(1000),
+--	allergies varchar(1000),
+--	appointment varchar (11),
+--	password varchar(100)
+--);
+--describe ekaurapp.patients;
+--LOAD DATA INFILE "patients.dat" INTO TABLE patients COLUMNS TERMINATED BY ',\t'LINES TERMINATED BY '\r\n';
+--
+--select * from patients;
+--create table cardiology(
+--	email varchar(100) primary key,
+--	appointment Varchar(30) not null	
+--);
+--create table ophthalmology(
+--	email varchar(100) primary key,
+--	appointment Varchar(30 not null	
+--);
+--create table dermatology(
+--	email varchar(100) primary key,
+--	appointment Varchar(30 not null	
+--);
+--create table psychology(
+--	email varchar(100) primary key,
+--	appointment Varchar(30 not null	
+--);
+--create table neurology(
+--	email varchar(100) primary key,
+--	appointment Varchar(30 not null	
+--);
+--describe patients;
+--select * from patients;
+--
+--describe ekaurapp.patients;
+--drop table patients;
+--create table patients(
+--	email varchar(100) PRIMARY KEY,
+--	name varchar(32) NOT NULL,
+--	address varchar(1000) NOT NULL,
+--	blood_group varchar(6) NOT NULL,
+--	height varchar(10) not null,
+--	weight varchar(10) not null,
+--	bp varchar(10)  not null,
+--	current_medications varchar(1000),
+--	past_diseases varchar(1000),
+--	allergies varchar(1000)
+--);
+--LOAD DATA INFILE "patients.dat" INTO TABLE patients COLUMNS TERMINATED BY ',\t'LINES TERMINATED BY '\r\n';
+--select * from patients;
+--drop table cardiology;
+--drop table ophthalmology;
+--drop table dermatology;
+--drop table neurology;
+--drop table psychology;
+--create table cardiology(
+--	name varchar(100) not null,
+--	email varchar(100) primary key,
+--	dt Varchar(30) not null,
+--	tm varchar(30) not null
+--);
+--create table ophthalmology(
+--	name varchar(100) not null,
+--	email varchar(100) primary key,
+--	dt Varchar(30) not null,
+--	tm varchar(30) not null
+--);
+--create table dermatology(
+--	name varchar(100) not null,
+--	email varchar(100) primary key,
+--	dt Varchar(30) not null,
+--	tm varchar(30) not null
+--);
+--create table psychology(
+--	name varchar(100) not null,
+--	email varchar(100) primary key,
+--	dt Varchar(30) not null,
+--	tm varchar(30) not null
+--);
+--create table neurology(
+--	name varchar(100) not null,
+--	email varchar(100) primary key,
+--	dt Varchar(30) not null,
+--	tm varchar(30) not null
+--);
+--drop table patients;
+--create table patients(
+--	email varchar(100) PRIMARY KEY,
+--	password varchar(100) NOT NULL,
+--	name varchar(32) NOT NULL,
+--	address varchar(1000) NOT NULL,
+--	age int(3) NOT NULL,
+--	allergies varchar(1000),
+--	appointmentId varchar (100),
+--	bloodGroup varchar(3) NOT NULL,
+--	bloodPressure varchar (7),
+--	currentMedications varchar(1000),
+--	height int(3) not null,
+--	past_diseases varchar(1000),
+--	weight int(3) not null
+--);
+--describe ekaurapp.patients;
+--LOAD DATA INFILE "patient_data.dat" INTO TABLE patients COLUMNS TERMINATED BY ',\t'LINES TERMINATED BY '\r\n';
+--select * from patients;
+--drop table patient;
+--create table patient(
+--	email varchar(100) PRIMARY KEY,
+--	password varchar(100) NOT NULL,
+--	name varchar(32) NOT NULL,
+--	address varchar(1000) NOT NULL,
+--	age int(3) NOT NULL,
+--	allergies varchar(1000),
+--	appointmentId varchar (100),
+--	bloodGroup varchar(3) NOT NULL,
+--	bloodPressure varchar (7),
+--	currentMedications varchar(1000),
+--	height int(3) not null,
+--	pastDiseases varchar(1000),
+--	weight int(3) not null
+--);
+--describe ekaurapp.patient;
+--LOAD DATA INFILE "patient_data.dat" INTO TABLE patient COLUMNS TERMINATED BY ',\t'LINES TERMINATED BY '\r\n';
+--select * from patient;
+--select * from patient;
+--select * from doctor;
+--select * from appointment;
+--describe patient;
+--select * from patient where email = 'm4mukulgarg@live.com';
+insert into doctor values('mg@m.com','123456','mg','CARDIOLOGY');

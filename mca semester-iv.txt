@@ -1,0 +1,9 @@
+Project Name:  Online Appointment Management    Description 
+ 
+A hospital provides health care appointment facility through an online portal. You can book an OPD appointment of a Doctor at the time s/he is available in the hospital. You can also book for an Appointment for a Diagnostic Test. In order to do so, a patient first needs to register for the website. Registration process involves recording patient
+
+ name, address, blood group, past medical history including height, weight, blood pressure, past diseases, allergies, current medications
+ 
+ , etc. All these information is shown to the doctor at the time of visit of the patient. Analyse the requirements in details and design & develop the online system for the appointments. You may visit similar hospital portals for analysis of the problem domain.  
+ 
+ blood pressure, past diseases, allergies, current medications
