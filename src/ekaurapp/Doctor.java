@@ -2,15 +2,14 @@ package ekaurapp;
 
 import java.sql.ResultSet;
 
-
-public final class Doctor extends User{
+public final class Doctor extends User {
 	public static final Doctor getDrFromDb(String email) {
 		Doctor d = null;
 		try {
 			String sql = "SELECT * from doctor where email = '" + email + "'";
 			ResultSet rs = ExecuteQuery.executeSQL(sql);
 			if (rs.next()) {
-				d=new Doctor();
+				d = new Doctor();
 				d.email = rs.getString(1);
 				d.password = rs.getString(2);
 				d.name = rs.getString(3);
@@ -27,20 +26,18 @@ public final class Doctor extends User{
 		}
 		return d;
 	}
+
 	/**
 	 * 
-	 * @param dr The object to be written into the database
+	 * @param dr
+	 *            The object to be written into the database
 	 * @return true if the operation was successful
 	 */
 	public final boolean putDrIntoDb() {
 		boolean d = false;
 		try {
-			String sql = "INSERT into doctor values("
-								+ "'" + this.getEmail() + "', "
-								+ "'" + this.getPassword() + "', "
-								+ "'" + this.getName()+ "',"
-								+ "'" + this.getDepartment().getDepartmentString() + "'"
-							+ ")";
+			String sql = "INSERT into doctor values(" + "'" + this.getEmail() + "', " + "'" + this.getPassword() + "', "
+					+ "'" + this.getName() + "'," + "'" + this.getDepartment().getDepartmentString() + "'" + ")";
 			ExecuteQuery.executeInsert(sql);
 			d = true;
 			ExecuteQuery.closeConnection();
@@ -49,8 +46,8 @@ public final class Doctor extends User{
 		}
 		return d;
 	}
-	Department department;
 
+	Department department;
 
 	/**
 	 * @return the department
@@ -58,6 +55,7 @@ public final class Doctor extends User{
 	public Department getDepartment() {
 		return department;
 	}
+
 	/**
 	 * @param department
 	 *            the department to set
@@ -65,6 +63,5 @@ public final class Doctor extends User{
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
-
 
 }

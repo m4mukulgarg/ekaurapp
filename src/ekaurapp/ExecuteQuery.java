@@ -7,17 +7,18 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public final class ExecuteQuery {
-	/**
+	/**b2674e642689a3:9804ed0c
 	 * JDBC driver name and database URL
 	 */
 	private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-	private static final String DB_URL = "jdbc:mysql://localhost:3306/ekaurapp?useSSL=false";
+	private static final String DB_URL = "jdbc:mysql://us-cdbr-iron-east-04.cleardb.net:3306/heroku_a00603a252ed839?reconnect=true";
+//	private static final String DB_URL = "jdbc:mysql://localhost:3306/ekaurapp?useSSL=false";
 
 	/**
 	 *   Database credentials
 	 */
-	private static final String USER = "root";
-	private static final String PASS = "abcd@1234";
+	private static final String USER = "b2674e642689a3";
+	private static final String PASS = "9804ed0c";
 	
 	
 	private static ResultSet rs = null;

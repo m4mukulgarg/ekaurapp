@@ -10,25 +10,27 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
+
 			<%
 				if (((null == session.getAttribute(Attributes.USER_TYPE)))
 						|| (((String) session.getAttribute(Attributes.USER_TYPE)).equals(Values.USER_GUEST))) {
 			%>
 
 			<a class="navbar-brand" href="RegisterPatient.jsp">Register</a>
-
+			<a	class="navbar-brand" href="login.jsp?user_id=mg@m.com&password=123456">Demo (Patient)</a>
+			<a	class="navbar-brand" href="login.jsp?user_id=abc@abc.com&password=abcd@1234" >Demo (Doctor)</a>
 			<%
-				} else if (!(null == session.getAttribute(Attributes.USER_TYPE))){
+				} else if (!(null == session.getAttribute(Attributes.USER_TYPE))) {
 					if (((String) session.getAttribute(Attributes.USER_TYPE)).equals(Values.USER_DOCTOR)) {
 			%>
 			<a class="navbar-brand" href="Pending.jsp">Pending</a>
 			<%
-					} else if (((String) session.getAttribute(Attributes.USER_TYPE)).equals(Values.USER_PATIENT)) {
+				} else if (((String) session.getAttribute(Attributes.USER_TYPE)).equals(Values.USER_PATIENT)) {
 			%>
 			<a class="navbar-brand" href="profile.jsp">Profile</a> <a
 				class="navbar-brand" href="Appointment.jsp">New Appointment</a>
 			<%
-					}
+				}
 				}
 			%>
 		</div>

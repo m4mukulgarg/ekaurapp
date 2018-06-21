@@ -2,30 +2,29 @@ package ekaurapp;
 
 import java.sql.ResultSet;
 
-public class Patient extends User{
-//	public static void main(String[] args) {
-//		Patient p = new Patient();
-//		p.setEmail("1000@localhost");
-//		System.out.println(p.isExists());
-//		p.setEmail("m@localhost");
-//		System.out.println(p.isExists());
-//		p.putUserInDB();
-//		System.out.println(p.isExists());
-//	}
-	String address ="";
+public class Patient extends User {
+	// public static void main(String[] args) {
+	// Patient p = new Patient();
+	// p.setEmail("1000@localhost");
+	// System.out.println(p.isExists());
+	// p.setEmail("m@localhost");
+	// System.out.println(p.isExists());
+	// p.putUserInDB();
+	// System.out.println(p.isExists());
+	// }
+	String address = "";
 	Integer age;
 	String allergies = "";
 	String appointmentId = "";
 	BloodGroup bloodGroup;
 	String bloodPressure = "";
 	String currentMedications = "";
-	
+
 	/**
 	 * height is in cm
 	 */
 	Integer height;
-	
-	
+
 	String pastDiseases = "";
 	/**
 	 * weight is in kg
@@ -66,9 +65,11 @@ public class Patient extends User{
 	public BloodGroup getBloodGroup() {
 		return bloodGroup;
 	}
-	/**
 
 	/**
+	 * 
+	 * /**
+	 * 
 	 * @return the bloodPressure
 	 */
 	public String getBloodPressure() {
@@ -95,7 +96,6 @@ public class Patient extends User{
 	public Integer getHeight() {
 		return height;
 	}
-
 
 	/**
 	 * @return the pastDiseases
@@ -124,7 +124,7 @@ public class Patient extends User{
 		}
 		return r;
 	}
-	
+
 	public static boolean isExists(String patientId) {
 		boolean r = false;
 		try {
@@ -138,32 +138,23 @@ public class Patient extends User{
 		}
 		return r;
 	}
-	
-	
+
 	/**
 	 * Put this object in database
-	 * @throws Exception 
+	 * 
+	 * @throws Exception
 	 */
 	public void putPatientInDB() throws Exception {
-			String sql;
-			sql = "INSERT into Patient Values ("
-					+ "'" + this.getEmail() + "',"
-					+ "'" + this.getPassword() + "',"
-					+ "'" + this.getName() + "',"
-					+ "'" + this.getAddress() + "',"
-					+ "'" + this.getAge()+ "',"
-					+ "'" + this.getAllergies() + "',"
-					+ "'" + this.getAppointmentId() + "',"
-					+ "'" + this.getBloodGroup().getBloodGroupString() + "',"
-					+ "'" + this.getBloodPressure() + "',"
-					+ "'" + this.getCurrentMedications() + "',"
-					+ "'" + this.getHeight() + "',"
-					+ "'" + this.getPastDiseases() + "',"
-					+ "'" + this.getWeight() + "'"
-				+ ")";
-			ExecuteQuery.executeInsert(sql);
-		}
-	
+		String sql;
+		sql = "INSERT into Patient Values (" + "'" + this.getEmail() + "'," + "'" + this.getPassword() + "'," + "'"
+				+ this.getName() + "'," + "'" + this.getAddress() + "'," + "'" + this.getAge() + "'," + "'"
+				+ this.getAllergies() + "'," + "'" + this.getAppointmentId() + "'," + "'"
+				+ this.getBloodGroup().getBloodGroupString() + "'," + "'" + this.getBloodPressure() + "'," + "'"
+				+ this.getCurrentMedications() + "'," + "'" + this.getHeight() + "'," + "'" + this.getPastDiseases()
+				+ "'," + "'" + this.getWeight() + "'" + ")";
+		ExecuteQuery.executeInsert(sql);
+	}
+
 	public void updatePatient() throws Exception {
 		String sql;
 		sql = "DELETE FROM Patient WHERE email ='" + this.getEmail() + "'";
@@ -182,9 +173,9 @@ public class Patient extends User{
 	/**
 	 * 	
 	 */
-	
+
 	public static final Patient getPatientFromDb(String email) {
-		Patient p=null;
+		Patient p = null;
 		try {
 			String sql = "SELECT * from patient where email = '" + email + "'";
 			ResultSet rs = ExecuteQuery.executeSQL(sql);
@@ -215,9 +206,7 @@ public class Patient extends User{
 		}
 		return p;
 	}
-	
-	
-	
+
 	/**
 	 * @param age
 	 *            the age to set
