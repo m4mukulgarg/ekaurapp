@@ -17,8 +17,8 @@
 			%>
 
 			<a class="navbar-brand" href="RegisterPatient.jsp">Register</a>
-			<a	class="navbar-brand" href="login.jsp?user_id=mg@m.com&password=123456">Demo (Patient)</a>
-			<a	class="navbar-brand" href="login.jsp?user_id=abc@abc.com&password=abcd@1234" >Demo (Doctor)</a>
+			<a	class="navbar-brand" href="login.jsp?user_id=mg@m.com&password=123456">Demo (Doctor)</a>
+			<a	class="navbar-brand" href="login.jsp?user_id=abc@abc.com&password=abcd@1234" >Demo (Patient)</a>
 			<%
 				} else if (!(null == session.getAttribute(Attributes.USER_TYPE))) {
 					if (((String) session.getAttribute(Attributes.USER_TYPE)).equals(Values.USER_DOCTOR)) {
