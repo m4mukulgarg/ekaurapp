@@ -5,11 +5,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
-
-import com.sun.javafx.runtime.SystemProperties;
 
 /**
  * @author the_professor
